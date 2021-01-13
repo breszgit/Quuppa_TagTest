@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export default {
     GetTagPos(TagID,){
-        return axios.get(Vue.prototype.$bkURL + "getTagPosition?version2=&tag="+TagID);
+        return axios.get(Vue.prototype.$bkURL + "getTagPosition?version=2&tag="+TagID);
     },
 }
 </script>

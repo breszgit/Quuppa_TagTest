@@ -1,4 +1,8 @@
 # quuppa_test
+##For production Test
+```
+npm run server -- --port 3000
+```
 
 ## Project setup
 ```

@@ -145,6 +145,7 @@ export default {
         GetPosTag(Tag){
             PosService.GetTagPos(Tag.id)
                 .then(res => {
+                    console.log(res);
                     if(res.data.tags.length > 0){
                         Tag = res.data.tags[0];
                         this.UpdateTag(Tag);
@@ -182,6 +183,11 @@ export default {
     timers: {
         AutoRefresh: { time: 1000, autostart: true, repeat:true }
     },
+    watch:{
+        ReadTime(){
+            this.RefeshTime = 0;
+        }
+    }
 }
 </script>
 
