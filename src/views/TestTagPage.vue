@@ -28,7 +28,7 @@
             </b-col>
         </b-row>
 
-        <canvas id="SimCV" v-bind:style="{position: 'absolute', left:'500px', top: 70, 'z-index': 0}" ></canvas>
+        <!-- <canvas id="SimCV" v-bind:style="{position: 'absolute', left:'500px', top: 70, 'z-index': 0}" ></canvas> -->
 
         <b-row v-if="VisualOpen == true">
             <b-col>
@@ -45,6 +45,8 @@
                     <b-col>{{CenterX}}</b-col>
                     <b-col>{{CenterY}}</b-col>
                 </b-row>
+                <b-button class="float-right mr-2" size="sm" variant="dark" @click="VisualOpen=false"><b-icon-arrows-angle-contract></b-icon-arrows-angle-contract> Hide</b-button>
+
             </b-col>
             <b-col cols="3">
                 <b-input-group class="mt-1 pr-2">
@@ -296,8 +298,8 @@ export default {
             let ctx = c.getContext("2d");    
             this.SimCV = ctx;
 
-            let X = 0;
-            let Y = 0;
+            // let X = 0;
+            // let Y = 0;
 
             this.SimCV.beginPath();
             this.SimCV.lineWidth = "0.5";
