@@ -245,9 +245,10 @@ export default {
             this.TagList = this.TagList.filter(x => x.id != Tag.id);
         },
         AddTag(){
+            let TagCnt = this.TagList.length;
             let NewTag = {
                 id:"",
-                name:"NewTag",
+                name:"Tag"+(TagCnt+1),
                 position:[0,0,0],
                 positionAccuracy:0,
                 positionTS:1430140978241,
